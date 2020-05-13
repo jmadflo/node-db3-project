@@ -30,3 +30,11 @@ function findSteps(id) {
 }
 
 // adds new scheme
+function add(scheme) {
+    return db('schemes')
+        .insert(scheme)
+            .then(id => {
+                return findById(id[0])
+            })
+}
+
