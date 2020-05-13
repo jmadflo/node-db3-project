@@ -11,6 +11,12 @@ module.exports = {
     remove
 }
 
+// returns all schemes
 function find(){
     return db('schemes')
+}
+
+// returns schemes by id
+function findById(id){
+    return db('schemes').where({ id }).first()
 }
