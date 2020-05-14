@@ -38,3 +38,12 @@ function add(scheme) {
             })
 }
 
+// updates scheme
+function update(updateScheme, id) {
+    return db('schemes')
+        .where({ id })
+            .update(updateScheme)
+                .then(() => {
+                    return findById(id)
+                })
+}
