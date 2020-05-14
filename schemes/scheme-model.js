@@ -55,7 +55,7 @@ function remove(id) {
         .where({ id }).del()
 }
 
-// adds new step
+// adds new step - stretch
 function addStep(step, scheme_id) {
     return db('steps')
         .insert({ ...step, scheme_id })
