@@ -47,3 +47,9 @@ function update(updateScheme, id) {
                     return findById(id)
                 })
 }
+
+// removes scheme
+function remove(id) {
+    return db('schemes')
+        .where({ id }).del()
+}
